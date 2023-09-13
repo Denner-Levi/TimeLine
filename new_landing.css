@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+label{
+    height: 30px;
+    width: 60px;
+    position: relative;
+    display: block;
+    background-color: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+label::after{
+    content: "";
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input:checked + label{
+    background-color: #242424;
+}
+input:checked + label::after{
+    left: 59px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+label:active::after{
+    width: 40px;
+}
+
+
+.dark-mode{
+    background: #242424;
+    color: white;
+    
+    .card{
+        background-color: black;
+    }
+    .card2{
+        background-color: black;
+    }
+
+    .baixo{
+        background-color: rgb(29, 28, 28);
+        color: white;
+    }
+
+    #active{
+        background-color: #282828;
+        color: white;
+    }
+    .trau{
+        color: rgb(255, 255, 255); 
+    }
+    #active:hover{
+        cursor: pointer;
+        background-color: #333333;
+    }
+}
+.trau{
+    display: inline-block; 
+    font-size: 23px;
+    margin-left: 1.3px; 
+    color: black; 
+    border-radius: 6px;
+}
+#active{
+    border-radius: 180px;
+    height: 35px;
+    width: 35px;
+    border: none;
+    background-color: #d6d1d1;
+    transition: 0.3s all ease-out;
+}
+#active:hover{
+    cursor: pointer;
+    background-color: #c5c4c4;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.trau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+}
+.flex-cards{
+    height: 60%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    position: relative; 
+    height: 53vh;
+    width: 39vh;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    background-image: url(oldmapbrazil.jpg);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+
+}
+.card2{
+    position: relative; 
+    height: 53vh;
+    width: 39vh;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    background-image: url(euroantigo.jpg);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+.card:hover{
+    cursor: pointer;
+    height: 54vh;
+    width: 39vh;
+    .baixo{
+        margin-top: 128%;
+    }
+
+}.card2:hover{
+    cursor: pointer;
+    height: 54vh;
+    width: 39vh;
+    .baixo{
+        margin-top: 128%;
+    }
+
+}
+.baixo{
+    height: 8%;
+    width: 100%;
+    margin-top: 125%;
+    background-color: rgb(209, 204, 204);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+}
+a:link {
+    text-decoration:none;
+    }
+    a:visited {
+    text-decoration:none;
+    }
+    a:hover {
+    text-decoration:none;
+    }
+.card:hover::after {
+    opacity: 1;
+}
+.gay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 1000px){
+
+
+    body{
+        height: 150vh;
+        justify-content: initial;
+    }
+    .flex-cards{
+        height: 60%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        gap: 70px;
+        margin-top: 130px;
+    }
+
+    .title{
+        margin-top: 40px;
+        flex-direction: column;
+        text-align: center;
+        gap: 0px;
+    }
+}
