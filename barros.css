@@ -36,16 +36,33 @@ body{
     background-image: url(oldmapbrazil.jpg);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s;
-
+}
+.card-time2{
+    position: relative; 
+    height: 53vh;
+    width: 39vh;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    background-image: url(tiktok.png);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
 }
 .card-time:hover{
     cursor: pointer;
     height: 54vh;
     width: 39vh;
-    .baixo{
+    .baixo-time{
         margin-top: 128%;
     }
-
+}
+.card-time2:hover{
+    cursor: pointer;
+    height: 54vh;
+    width: 39vh;
+    .baixo-time{
+        margin-top: 128%;
+    }
 }
 .spaç{
     margin-top: 10%;
@@ -61,6 +78,7 @@ body{
     justify-content: center;
 
 }
+
 a:link {
     text-decoration:none;
     }
